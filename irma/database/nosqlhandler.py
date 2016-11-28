@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2013-2014 QuarksLab.
+# Copyright (c) 2013-2016 Quarkslab.
 # This file is part of IRMA project.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -89,7 +89,7 @@ class NoSQLDatabase(Singleton):
         if not self._db_conn:
             return
         try:
-            self._db_conn.disconnect()
+            self._db_conn.close()
             self._db_conn = None
             self._db_cache = dict()
             self._coll_cache = dict()

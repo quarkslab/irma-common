@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2013-2014 QuarksLab.
+# Copyright (c) 2013-2016 Quarkslab.
 # This file is part of IRMA project.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -61,6 +61,16 @@ class IrmaConfigurationError(IrmaCoreError):
 
 class IrmaFtpError(IrmaCoreError):
     """Error on ftp manager."""
+    pass
+
+
+class IrmaFTPSError(IrmaFtpError):
+    """Error on ftp/tls manager."""
+    pass
+
+
+class IrmaSFTPError(IrmaFtpError):
+    """Error on sftp manager."""
     pass
 
 

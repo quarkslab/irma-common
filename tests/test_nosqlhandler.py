@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2013-2014 QuarksLab.
+# Copyright (c) 2013-2016 Quarkslab.
 # This file is part of IRMA project.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,7 +19,7 @@ from irma.database.nosqlhandler import NoSQLDatabase
 from pymongo import MongoClient
 
 # Test config
-test_db_uri = "mongodb://localhost"
+test_db_uri = "mongodb://irma.test"
 test_db_name = "unitest"
 test_db_collection = "testobject"
 

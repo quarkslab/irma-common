@@ -28,6 +28,7 @@ class PluginMetaClass(type):
     ##########################################################################
 
     _plugin_name_ = ''
+    _plugin_display_name_ = ''
     _plugin_author_ = ''
     _plugin_version_ = None
     _plugin_description_ = ''
@@ -47,6 +48,8 @@ class PluginMetaClass(type):
         # perform some verifications
         if not cls._plugin_name_:
             raise PluginFormatError("Invalid plugin_name")
+        if not cls._plugin_display_name_:
+            raise PluginFormatError("Invalid plugin_display_name")
         if not cls._plugin_author_:
             raise PluginFormatError("Invalid plugin_author")
         if not cls._plugin_version_:
@@ -63,6 +66,10 @@ class PluginMetaClass(type):
     @property
     def plugin_name(cls):
         return cls._plugin_name_
+
+    @property
+    def plugin_display_name(cls):
+        return cls._plugin_display_name_
 
     @property
     def plugin_version(cls):
